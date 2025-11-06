@@ -160,7 +160,8 @@ def test_various_valid_expressions(client, expression, expected_contains):
     """
     response = client.post('/', data={'display': expression})
     assert response.status_code == 200
-    assert expected_contains.encode() in response.data
+    assert expected_contains.encode() in response.data, \
+        f"Expected '{expected_contains}' in response for expression '{expression}'"
 
 
 @pytest.mark.parametrize("invalid_expression", [
