@@ -166,5 +166,5 @@ def test_multiply_negative_numbers():
     Exemple : -8 * 4 = -32
     """
     result = multiply(-8, 4)
-    assert result == -8, f"Expected -8, instead obtained {result}"
+    assert result == -32, f"Expected -32, instead obtained {result}"
 
